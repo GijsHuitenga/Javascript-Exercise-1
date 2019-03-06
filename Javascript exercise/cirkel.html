@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="author" content="Gijs Huitenga, MD1A">
+		<title>Cirkel - JE1</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h2>Cirkel - JE1</h2>
+		</header>
+		<ul class="topnav">
+			<li><a href="index.html">Home</a></li>
+			<li><a class="active" href="cirkel.html">Cirkel</a></li>
+			<li><a href="temp.html">Temperatuur</a></li>
+			<li><a href="recht.html">Rechthoek</a></li>
+		</ul>
+		<div class="info" style="margin-left: 17%;margin-top: 20px;">
+			<input type="text" id="radius"> <br><br>
+			<button type="button" id="area"> Area </button>
+			<button type="button" id="circumference"> Circumference </button> <br><br><br>
+			Result Area: <input type="text" id="resultA"> <br>
+			Result Circumference: <input type="text" id="resultB"> <br><br>
+		</div>
+		<a href="index.html">Terug naar Home</a>
+		<script>
+			
+			$(document).ready(function() {
+				//Area
+				$("#area").click(function() {
+					var a = $("#radius").val();
+					$("#resultA").val((22 / 7) * (+a) * (+a));
+				});
+				//Circumference
+			    $("#circumference").click(function() {
+			        var a = $("#radius").val();
+			        $("#resultB").val((2) * (22 / 7) * (+a));
+			    });
+			});
+
+		</script>
+	</body>
+</html>
